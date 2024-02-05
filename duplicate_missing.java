@@ -16,7 +16,9 @@ public class duplicate_missing {
                     break;
                 }
             }
-            if(r != 0)break;
+            if(r != 0){
+                break;
+            }
         }
         for(int i = 1;i<=arr.length;i++){ //[1,n]
             boolean f = false;
@@ -32,7 +34,7 @@ public class duplicate_missing {
             }
         }
 
-        System.out.println("the missing element is "+m + " the repeated element is "+r);
+        System.out.println("The missing element is "+m + " and The repeated element is "+r);
 
     }
 
@@ -51,10 +53,14 @@ public class duplicate_missing {
                 break;
             }
         }
-        System.out.println("the missing element is "+m + " the repeated element is "+r);
+        System.out.println("The missing element is "+m + " and The repeated element is "+r);
     }   
 
     public static void main(String[] args) {
-        
+        duplicate_missing dm = new duplicate_missing();
+        int arr1[] = {1, 2, 3, 4, 4};
+        int arr2[] = {1, 2, 3, 4, 5};
+        dm.findMissRepeat(arr1); // should print: the missing element is 5 the repeated element is 4
+        dm.findMissRepeat2(arr2); // should print: the missing element is 5 the repeated element is 0 (assuming 0 is not a valid element in the array)
     }
 }
