@@ -9,8 +9,8 @@ public class duplicate_missing {
     void findMissRepeat(int arr[]){
         int r = 0;
         int m = 0;
-        for(int i = 0;i<arr.length;i++){
-            for(int j = i+1;j<arr.length;j++){
+        for(int i = 0; i < arr.length; i++){
+            for(int j = i + 1; j < arr.length; j++){
                 if(arr[i] == arr[j]){
                     r = arr[i];
                     break;
@@ -20,9 +20,9 @@ public class duplicate_missing {
                 break;
             }
         }
-        for(int i = 1;i<=arr.length;i++){ //[1,n]
+        for(int i = 1; i <= arr.length; i++){ //[1,n]
             boolean f = false;
-            for(int  j =0;j<arr.length;j++){
+            for(int j = 0; j < arr.length; j++){
                 if(arr[j] == i){
                     f = true;
                     break;
@@ -43,11 +43,11 @@ public class duplicate_missing {
         int r = 0;
         int m = 0;
         int freq[] = new int[arr.length+1];
-        for(int i = 0;i<arr.length;i++){
+        for(int i = 0; i < arr.length; i++){
             freq[arr[i]]++;
             if(freq[arr[i]] == 2)r = arr[i];
         }
-        for(int i = 1;i<=arr.length;i++){
+        for(int i = 1; i <= arr.length; i++){
             if(freq[i] == 0){
                 m = i;
                 break;
